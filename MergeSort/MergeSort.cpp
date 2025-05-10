@@ -7,7 +7,6 @@ void merge(vector<int>& arr, int left, int mid, int right) {
     int i = left;
     int j = mid + 1;
     int k = 0;
-
     while (i <= mid && j <= right) {
         if (arr[i] <= arr[j]) {
             temp[k++] = arr[i++];
@@ -16,15 +15,12 @@ void merge(vector<int>& arr, int left, int mid, int right) {
             temp[k++] = arr[j++];
         }
     }
-
     while (i <= mid) {
         temp[k++] = arr[i++];
     }
-
     while (j <= right) {
         temp[k++] = arr[j++];
     }
-
     for (int idx = 0; idx < temp.size(); ++idx) {
         arr[left + idx] = temp[idx];
     }
@@ -32,7 +28,6 @@ void merge(vector<int>& arr, int left, int mid, int right) {
 
 void mergeSort(vector<int>& arr, int left, int right) {
     if (left >= right) return;
-
     int mid = left + (right - left) / 2;
     mergeSort(arr, left, mid);
     mergeSort(arr, mid + 1, right);
@@ -43,20 +38,16 @@ int main() {
     int n;
     cout << "Enter number of elements: ";
     cin >> n;
-
     vector<int> arr(n);
     cout << "Enter " << n << " elements:\n";
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
     }
-
     mergeSort(arr, 0, n - 1);
-
     cout << "Sorted array:\n";
     for (int num : arr) {
         cout << num << " ";
     }
     cout << endl;
-
     return 0;
 }

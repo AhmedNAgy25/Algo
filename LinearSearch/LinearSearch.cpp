@@ -10,7 +10,6 @@ void inputVector(vector<int>& vec, int size) {
         vec.push_back(value);
     }
 }
-
 int linearSearch(const vector<int>& vec, int target) {
     for (size_t i = 0; i < vec.size(); ++i) {
         if (vec[i] == target) {
@@ -19,29 +18,21 @@ int linearSearch(const vector<int>& vec, int target) {
     }
     return -1;
 }
-
 int main() {
     int size, searchElement;
-
     cout << "Enter the size of the vector: ";
     cin >> size;
-
     vector<int> vec;
     vec.reserve(size);
-
     inputVector(vec, size);
-
     cout << "Enter the element to search: ";
     cin >> searchElement;
-
     int index = linearSearch(vec, searchElement);
-
     if (index != -1) {
         cout << "Element found at index " << index << " (position " << index + 1 << ")." << endl;
     }
     else {
         cout << "Element not found in the vector." << endl;
     }
-
     return 0;
 }

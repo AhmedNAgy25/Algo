@@ -1,0 +1,3 @@
+﻿  insertion.cpp
+E:\college\algo\insertion\insertion.cpp(6,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  insertion.vcxproj -> E:\college\algo\insertion\x64\Debug\insertion.exe

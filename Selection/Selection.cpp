@@ -19,20 +19,16 @@ int main() {
     int n;
     cout << "Enter number of elements: ";
     cin >> n;
-
     vector<int> arr(n);
     cout << "Enter " << n << " elements:\n";
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
     }
-
     selectionSort(arr);
-
     cout << "Sorted array:\n";
     for (int num : arr) {
         cout << num << " ";
     }
     cout << endl;
-
     return 0;
 }
